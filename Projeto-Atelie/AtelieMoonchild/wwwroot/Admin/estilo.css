@@ -1,0 +1,366 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+header {
+    z-index: 1;
+    position: absolute;
+    background: black;
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    height: 100px;
+}
+
+.left_area h3 {
+    color: #fff;
+    margin: -20px 0px 0px 0px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.left_area span {
+    color: #19B3D3;
+}
+
+.fa-moon {
+    text-shadow: 0 0 5px #19B3D3, 0 0 10px #19B3D3, 0 0 15px #19B3D3;
+}
+
+.logout_btn {
+    padding: 10px 25px;
+    background: #19B3D3;
+    text-decoration: none;
+    float: right;
+    margin-top: -25px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+    .logout_btn:hover {
+        text-decoration: none;
+        background: #0B87A6;
+        color: #fff
+    }
+
+.sidebar-Admin {
+    overflow-x: hidden;
+    z-index: 1;
+    top: 0;
+    background: rgba(0, 0, 0, 1);
+    margin-top: 100px;
+    padding-top: 50px;
+    position: absolute;
+    left: 0;
+    width: 255px;
+    height: 150vh;
+    transition: 0.5s;
+    transition-property: left;
+    overflow-y: auto;
+}
+
+.profile_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar-Admin .profile_info .profile_image {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar-Admin .profile_info h4 {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+}
+
+.sidebar-Admin a {
+    color: #fff;
+    display: block;
+    width: 100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+    .sidebar-Admin a:hover {
+        background: #19B3D3;
+    }
+
+.sidebar-Admin i {
+    padding-right: 10px;
+}
+
+label #sidebar_btn {
+    z-index: 1;
+    color: #fff;
+    position: absolute;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: -2px 0;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+    label #sidebar_btn:hover {
+        color: #19B3D3;
+    }
+
+#check:checked ~ .sidebar-Admin {
+    left: -185px;
+}
+
+    #check:checked ~ .sidebar-Admin a span {
+        display: none;
+    }
+
+    #check:checked ~ .sidebar-Admin a {
+        font-size: 20px;
+        margin-left: 165px;
+        width: 100%;
+    }
+
+.container {
+    margin: 0 auto;
+}
+
+.content {
+    width: (100% - 250px);
+    margin-top: 120px;
+    padding: 20px 20px 20px 20px;
+    margin-left: 260px;
+    background-color: white;
+    height: 93vh;
+    transition: 0.5s;
+}
+
+    .content h1 {
+        text-align: center;
+        color: #00008B;
+        font-weight: bold;
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+
+.control-label {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+#PreviewImagem {
+    margin-top: 10px;
+    width: 400px;
+    height: 400px;
+}
+
+#check:checked ~ .content {
+    margin-left: 60px;
+}
+
+#check:checked ~ .sidebar-Admin .profile_info {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.mobile_nav {
+    display: none;
+}
+
+.content .card p {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+
+i {
+    font-size: 20px;
+}
+/* Index */
+
+/* Responsive CSS */
+@media screen and (max-width: 780px) {
+    .sidebar-Admin {
+        display: none;
+    }
+
+    #sidebar_btn {
+        display: none;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 10px 20px;
+        transition: 0s;
+    }
+
+    #check:checked ~ .content {
+        margin-left: 0;
+    }
+
+    .mobile_nav {
+        display: block;
+        width: calc(100% - 0%);
+    }
+
+    .nav_bar {
+        background: #222;
+        width: (100% - 0px);
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+        .nav_bar .mobile_profile_image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url('../img/Admin/logoatelie.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .nav_bar .nav_btn {
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.5s;
+            transition-property: color;
+        }
+
+            .nav_bar .nav_btn:hover {
+                color: #19B3D3;
+            }
+
+    .mobile_nav_items {
+        background: #2F323A;
+        display: none;
+    }
+
+        .mobile_nav_items a {
+            color: #fff;
+            display: block;
+            text-align: center;
+            letter-spacing: 1px;
+            line-height: 60px;
+            text-decoration: none;
+            box-sizing: border-box;
+            transition: 0.5s;
+            transition-property: background;
+        }
+
+            .mobile_nav_items a:hover {
+                background: #19B3D3;
+            }
+
+        .mobile_nav_items i {
+            padding-right: 10px;
+        }
+
+    .active {
+        display: block;
+    }
+
+    .logout_btn {
+        padding: 5px;
+        background: #19B3D3;
+        text-decoration: none;
+        float: right;
+        margin-top: -30px;
+        margin-right: 20px;
+        border-radius: 2px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+        transition: 0.5s;
+        transition-property: background;
+    }
+}
+
+@media screen and (max-width: 775px) {
+    header {
+        z-index: 1;
+        position: absolute;
+        background: black;
+        padding: 20px;
+        width: 100%;
+        top: 0;
+        height: 75px;
+    }
+}
+
+
+@media screen and (max-width: 380px) {
+
+
+    .content {
+        height: 200vh;
+        width: 100%;
+        transition: 0.5s;
+        overflow-x: hidden;
+    }
+
+    header {
+        z-index: 1;
+        position: absolute;
+        background: black;
+        padding: 20px;
+        width: 100%;
+        top: 0;
+        height: 70px;
+    }
+
+    #PreviewImagem {
+        margin-top: 10px;
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .left_area h3 {
+        color: #fff;
+        margin: -14px 0px 0px 0px;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 900;
+    }
+
+    .fa-moon {
+        text-shadow: 0 0 5px #19B3D3, 0 0 10px #19B3D3, 0 0 15px #19B3D3;
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,109 @@
+﻿<!-- Carregar as listasdo homecontroller.cs-->
+@model AtelieMoonchild.ViewModels.HomeViewModel
+
+@{
+    ViewData["Title"] = "Contato";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <link href="~/css/Pages/Contato.css" rel="stylesheet" />
+
+    <style>
+        .swal-text {
+            color: black;
+        }
+
+        .swal-title {
+            color: black;
+        }
+
+        .swal-button {
+            background-color: #00008B;
+        }
+
+            .swal-button:hover:active {
+                background-color: #00008B;
+            }
+
+        .swal-icon--success__ring {
+            border: 4px solid green;
+        }
+    </style>
+}
+
+<!-- Final Indicador fim pagina-->
+<!-- Breadcrumb Area Start -->
+<section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url('../../img/banner/bannerContato.jpg'); background-position:bottom;">
+</section>
+<!-- Breadcrumb Area End -->
+
+
+<h2 class="Title-contact">Envie um e-mail para nossa equipe</h2>
+<h4 class="Subtitulo-contact">Fazemos artes em <span class="Span-contact">ROUPAS, MADEIRAS, PAPEL, QUADROS, PAREDE e MUITO MAIS VARIEDADES</span> para o cliente</h4>
+<!-- Contato -->
+
+<div class="container-contact">
+    <form id="formcontato" asp-action="Contatos" method="post" data-ajax="true" data-ajax-method="post" data-ajax-complete="voltou" data-ajax-failure="falhou">
+        <div class="form-row">
+            <div class="form-group col-md-6 col-12">
+                <label class="label-contact" style="color: black;">Nome</label>
+                <input class="form-control" asp-for="Contato.Nome">
+                <span class="text-danger" asp-validation-for="Contato.Nome"></span>
+            </div>
+            <div class="form-group col-md-6 col-12">
+                <label class="label-contact" style="color: black;">Assunto</label>
+                <input class="form-control" asp-for="Contato.Assunto">
+                <span class="text-danger" asp-validation-for="Contato.Assunto"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-12 col-12">
+                <label class="label-contact" style="color: black;">E-mail</label>
+                <input class="form-control" asp-for="Contato.Email">
+                <span class="text-danger" asp-validation-for="Contato.Email"></span>
+            </div>
+        </div>
+        <div class="form-row col-md-12 col-12">
+            <div class="form-group col-md-12">
+                <label class="label-contact" style="color: black;">Mensagem</label>
+                <textarea id="textarea" class="form-control" rows="10" cols="10" asp-for="Contato.Mensagem"></textarea>
+                <span class="text-danger" asp-validation-for="Contato.Mensagem"></span>
+            </div>
+        </div>
+        <div class="col-md-12 col-12 contact-flex">
+            <button class="btn btn-contact"> Enviar </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts{
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+    <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+    <script type="text/javascript">
+
+        // Voltou
+        voltou = function (xhr) {
+            swal({
+                title: "Obrigado",
+                text: "Agradaçemos seu contato, retornaremos em breve",
+                icon: "success",
+                button: "OK"
+            });
+            document.getElementById('formcontato').reset(); // Limpar Form
+        }
+
+        // falhou
+        falhou = function (xhr) {
+            swal({
+                title: "Problemas ao Enviar",
+                text: "Ocorreu um problema no envio de sua mensagem! Por favor, tente novamente",
+                icon: "warning",
+                button: "OK"
+            });
+        }
+    </script>
+}

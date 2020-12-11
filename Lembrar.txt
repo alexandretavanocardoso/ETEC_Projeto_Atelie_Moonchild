@@ -1,0 +1,2 @@
+- Mudar no Controler dos Crud que tem paginação a quantidade de itens por pagina pode ter - colocar 20 (Categorias e Emails)
+- Mudar Link do template no e-mail, colocar imagem que esta LOCALMENTE

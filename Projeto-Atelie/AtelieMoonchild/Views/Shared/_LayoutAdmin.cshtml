@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ateliê Moonchild - @ViewData["Title"]</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/img/Admin/logoatelie.jpg">
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Admin/estilo.css" rel="stylesheet" />
+
+    <style>
+        .activeMenu {
+            background-color: #19B3D3;
+        }
+    </style>
+
+    @RenderSection("Styles", required: false)
+</head>
+
+<body>
+    <input type="checkbox" id="check">
+    <!--header area start-->
+    <header>
+        <label for="check">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <a class="left_area" asp-controller="Admin" asp-action="Index" style="text-decoration:none;">
+            <h3>Ateliê <span>Moon<i class="fa fa-moon"></i>hild</span></h3>
+        </a>
+        <form id="logout" asp-controller="Account" asp-action="Logout" hidden>
+        </form>
+        <div class="right_area">
+            <a href="javascript:{}" onclick="document.getElementById('logout').submit(); return false;" class="logout_btn">Sair</a>
+        </div>
+
+    </header>
+    <!--header area end-->
+    <!--mobile navigation bar start-->
+    <div class="mobile_nav">
+        <div class="nav_bar">
+            <img srcrc="~/img/Admin/logoatelie.jpg" class="mobile_profile_image" alt="">
+            <i class="fa fa-bars nav_btn"></i>
+        </div>
+        <div class="mobile_nav_items">
+            <a asp-controller="Admin" asp-action="Index" class="@(ViewData["Title"].ToString() == "Admin-Index" ? "activeMenu" : "")"><i class="fa fa-user-astronaut"></i><span>Pagina Inicial</span></a>
+            <a asp-controller="Contatos" asp-action="Index" class="@(ViewData["Title"].ToString() == "E-mail" ? "activeMenu" : "")"><i class="fas fa-mail-bulk"></i><span>E-mail</span></a>
+            <a asp-controller="Categorias" asp-action="Index"class="@(ViewData["Title"].ToString() == "Categorias" ? "activeMenu" : "")"><i class="fas fa-grip-horizontal"></i><span>Categoria</span></a>
+            <a asp-controller="Produtos" asp-action="Index"class="@(ViewData["Title"].ToString() == "Imagens" ? "activeMenu" : "")"><i class="fas fa-image"></i><span>Imagens</span></a>
+            <a asp-controller="Home" asp-action="Index" target="_blank"><i class="fa fa-user-astronaut"></i><span>Site</span></a>
+        </div>
+    </div>
+    <!--mobile navigation bar end-->
+    <!--sidebar start-->
+    <div class="sidebar-Admin">
+        <div class="profile_info">
+            <img src="~/img/Admin/logoatelie.jpg" class="profile_image" alt="">
+            <h4>Ateliê Moonchild</h4>
+        </div>
+
+        <a asp-controller="Admin" asp-action="Index" class="@(ViewData["Title"].ToString() == "Admin-Index" ? "activeMenu" : "")"><i class="fa fa-user-astronaut"></i><span>Pagina Inicial</span></a>
+        <a asp-controller="Contatos" asp-action="Index" class="@(ViewData["Title"].ToString() == "E-mail" ? "activeMenu" : "")"><i class="fas fa-mail-bulk"></i><span>E-mail</span></a>
+        <a asp-controller="Categorias" asp-action="Index" class="@(ViewData["Title"].ToString() == "Categorias" ? "activeMenu" : "")"><i class="fas fa-grip-horizontal"></i><span>Categoria</span></a>
+        <a asp-controller="Produtos" asp-action="Index" class="@(ViewData["Title"].ToString() == "Imagens" ? "activeMenu" : "")"><i class="fas fa-image"></i><span>Imagens</span></a>
+        <a asp-controller="Home" asp-action="Index" target="_blank"><i class="fa fa-user-astronaut"></i><span>Site</span></a>
+    </div>
+    <!--sidebar end-->
+
+
+    @RenderBody()
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/1d0fc5b865.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.nav_btn').click(function () {
+                $('.mobile_nav_items').toggleClass('active');
+            });
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+
+</html>

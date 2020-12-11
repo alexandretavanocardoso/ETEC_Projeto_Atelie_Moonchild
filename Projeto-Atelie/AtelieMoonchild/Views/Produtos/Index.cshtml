@@ -1,0 +1,70 @@
+﻿@model X.PagedList.IPagedList<AtelieMoonchild.Models.Produto>
+@using X.PagedList.Mvc.Core;
+
+@{
+    ViewData["Title"] = "Imagens";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; @* Escolhe o _layout.cshtml que vai usar *@
+}
+
+<link href="~/css-migrations-produto/Index.css" rel="stylesheet" />
+
+<div class="content">
+    <h2> Listagem de Imagens </h2>
+
+    <form class="form" asp-controller="Produtos" asp-action="Index" method="get">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <a asp-action="Create" class="btn btn-primary">Adicionar Novo</a>
+            </div>
+            <input style=" border: 1px solid #00008B;" type="text" class="form-control" value="@ViewData["Filtro"]"
+                   placeholder="Imagem a Pesquisar" name="pesquisa" aria-label="" aria-describedby="basic-addon1" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+            </div>
+        </div>
+    </form>
+
+
+    <div class="">
+        <div class="container">
+            <div class=" card-flex">
+                @foreach (var item in Model)
+                {
+
+                    <div class="card" style="">
+                        <img src="@( System.IO.File.Exists(ViewData["CaminhoImagem"] + item.Image) ?
+                    Url.Content(item.Image) : Url.Content("/img/sem_foto.png") )" class="card-img-top" id="PreviewImagem" />
+
+                        <div class="card-body">
+                            <h4 class="card-title" title="@item.Nome"> @Html.DisplayFor(modelItem => item.Nome)</h4>
+
+                            <h5 style=""  class="card-text" title="@item.Categoria.Nome"> @Html.DisplayFor(modelItem => item.Categoria.Nome)</h5>
+                        </div>
+                        <div class="card-body-2">
+                            <a asp-action="Edit" asp-route-id="@item.Id"><i class="fa fa-edit td-icones" style="color:black;" data-toggle="tooltip" data-placement="right" title="Editar"></i></a>
+                            <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-info td-icones" style="color:#797300;" data-toggle="tooltip" data-placement="bottom" title="Detalhes"></i></a>
+                            <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash-alt td-icones" style="color:darkred;" data-toggle="tooltip" data-placement="left" title="Deletar"></i></a>
+                        </div>
+
+                    </div>
+
+                }
+            </div>
+        </div>
+    </div>
+
+
+    @Html.PagedListPager(Model, pagina => Url.Action("Index", new { filtro = ViewData["Filtro"], pagina }),
+                new X.PagedList.Web.Common.PagedListRenderOptionsBase
+                {
+                    DisplayLinkToFirstPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+                    DisplayLinkToLastPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+                    DisplayLinkToNextPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+                    DisplayLinkToPreviousPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+                    ContainerDivClasses = new[] { "pagination-container" },
+                    UlElementClasses = new string[] { "pagination justify-content-center" },
+                    LiElementClasses = new string[] { "page-item" },
+                    PageClasses = new string[] { "page-link" }
+                })
+</div>
+

@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Views\Produtoes\**" />
+    <Compile Remove="wwwroot\js\Paginas\**" />
+    <Content Remove="Views\Produtoes\**" />
+    <Content Remove="wwwroot\js\Paginas\**" />
+    <EmbeddedResource Remove="Views\Produtoes\**" />
+    <EmbeddedResource Remove="wwwroot\js\Paginas\**" />
+    <None Remove="Views\Produtoes\**" />
+    <None Remove="wwwroot\js\Paginas\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ProdutoesController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Shared\_Layout - Cópia.cshtml" />
+    <Content Remove="Views\Shared\_Layout1.cshtml" />
+    <Content Remove="Views\Shared\_LayoutLogin.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\style.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_about.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_backtotop.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_blog.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_breadcrumb.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_buttons.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_contact.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_follow.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_footer.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_gallery.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_header.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_heading.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_hero.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_preloader.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_reboot.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_spacing.scssc" />
+    <None Include="wwwroot\.sass-cache\21a4b39ea5e18e82b477801fd65653651cff68fb\_team.scssc" />
+    <None Include="wwwroot\.sass-cache\4d8631430feb77291164b142a0f4eea9f77304c7\_color.scssc" />
+    <None Include="wwwroot\.sass-cache\4d8631430feb77291164b142a0f4eea9f77304c7\_fonts.scssc" />
+    <None Include="wwwroot\.sass-cache\4d8631430feb77291164b142a0f4eea9f77304c7\_responsive.scssc" />
+    <None Include="wwwroot\.sass-cache\4d8631430feb77291164b142a0f4eea9f77304c7\_variables.scssc" />
+    <None Include="wwwroot\.sass-cache\8741ec316a552dbebfe0ed9b28046895abe45015\_flex.scssc" />
+    <None Include="wwwroot\.sass-cache\8741ec316a552dbebfe0ed9b28046895abe45015\_miscellaneous.scssc" />
+    <None Include="wwwroot\lib\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.21" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\img\Imagens\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+
+
+</Project>

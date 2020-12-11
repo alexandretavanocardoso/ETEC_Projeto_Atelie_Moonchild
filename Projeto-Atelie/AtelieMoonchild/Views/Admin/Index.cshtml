@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AtelieMoonchild.Models.Categoria>
+
+@{
+    ViewData["Title"] = "Admin-Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles {
+
+    <link href="~/Admin/Index.css" rel="stylesheet" />
+    
+}
+
+<div class="content">
+    <div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="fundo-atelie">
+                    <h2> Prazer Ateliê Moonchild</h2>
+                    <p> Vamos administrar seu site !</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="fundo-admin">
+                <div>
+                    <i class="fas fa-mail-bulk"></i>
+                </div>
+                <h2> cheque seus e-mails</h2>
+                <div class="btn-email">
+                    <a asp-action="index" asp-controller="Contatos">Checar e-mails</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="fundo-admin">
+                <div>
+                    <i class="fas fa-grip-horizontal"></i>
+                </div>
+                <h2> Aumente as categorias </h2>
+                <div class="btn-email">
+                    <a asp-action="index" asp-controller="Categorias">Criar Categoria</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="fundo-admin">
+                <div>
+                    <i class="fas fa-image"></i>
+                </div>
+                <h2> Adicione novas artes </h2>
+                <div class="btn-email">
+                    <a asp-action="index" asp-controller="Produtos">Adicionar Imagens</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

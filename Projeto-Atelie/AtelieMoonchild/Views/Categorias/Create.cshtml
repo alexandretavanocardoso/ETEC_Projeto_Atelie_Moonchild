@@ -1,0 +1,52 @@
+﻿@model AtelieMoonchild.Models.Categoria
+
+@{
+    ViewData["Title"] = "Categorias";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; @* Escolhe o _layout.cshtml que vai usar *@
+}
+
+@section Styles{
+    <link href="~/css-migrations-categoria/Create.css" rel="stylesheet" />
+
+    <style>
+        .btn {
+            text-align: center;
+            width: 150px;
+            padding: 8px 0 8px 0;
+        }
+
+        .btn-dark {
+            margin-right: 10px;
+        }
+
+        .btn-primary {
+            margin-left: 10px;
+        }
+    </style>
+}
+
+<div class="content">
+
+    <h1>Crie sua nova categoria</h1>
+
+    <div class="row">
+        <div class="col-md-6">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+                <div class="form-group" style=" display:flex; flex-direction:row;">
+                    <input type="submit" value="Criar" class="btn btn-dark" />
+                    <a asp-action="Index" class="btn btn-primary">Voltar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

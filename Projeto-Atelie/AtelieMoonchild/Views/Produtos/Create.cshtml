@@ -1,0 +1,88 @@
+﻿@model AtelieMoonchild.Models.Produto
+
+@{
+    ViewData["Title"] = "Imagens";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; @* Escolhe o _layout.cshtml que vai usar *@
+}
+
+@section Styles{
+    <link href="~/css-migrations-produto/Create.css" rel="stylesheet" />
+
+    <style>
+        .btn {
+            text-align: center;
+            width: 150px;
+            padding: 8px 0 8px 0;
+        }
+
+        .btn-dark {
+            margin-right: 10px;
+        }
+
+        .btn-primary {
+            margin-left: 10px;
+        }
+    </style>
+
+}
+
+<div class="container">
+    <div class=" content">
+
+        <h1>Adicione sua nova Imagem</h1>
+
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12">
+                    <div class="form-group">
+                        <label asp-for="CategoriaId" class="control-label"></label>
+                        <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+                    </div>
+                </div>
+                <div class="col-md-12 col-12">
+                    <div class="form-group">
+                        <label asp-for="Image" class="control-label"></label>
+                        <input type="file" asp-for="Image" class="form-control-file" accept=".jpg,.jpeg,.png,.gif" required="" /><!-- Mudar para tipo file e accept-->
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-12 col-12">
+                    <img src="" class="img-fluid" id="PreviewImagem" /> <!-- incluir - mostra imagem pelo JS-->
+                </div>
+                <div class="col-md-12 col-12" style="margin-top: 30px;display:flex; flex-direction:row;">
+                    <div class="form-group">
+                        <input type="submit" value="Criar" class="btn btn-dark" /> 
+                        <a asp-action="Index" class="btn btn-primary">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    @* JS para imagem*@
+    <script type="text/javascript">
+        window.addEventListener('load', function () {
+            document.querySelector('input[type="file"]').addEventListener('change', function () {
+                if (this.files && this.files[0]) {
+                    var img = document.getElementById("PreviewImagem");
+                    img.src = URL.createObjectURL(this.files[0]); // Cria a imagem na memoria do navegador
+                }
+            });
+        });
+    </script>
+}
+

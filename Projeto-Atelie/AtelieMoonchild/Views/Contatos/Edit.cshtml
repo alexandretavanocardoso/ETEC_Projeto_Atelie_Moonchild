@@ -1,0 +1,81 @@
+﻿@model AtelieMoonchild.Models.Contato
+
+@{
+    ViewData["Title"] = "E-mail";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@section Styles{
+
+    <link href="~/css-migrations-contato/Editar.css" rel="stylesheet" />
+
+    <style>
+        .btn {
+            text-align: center;
+            width: 150px;
+            padding: 8px 0 8px 0;
+        }
+
+        .btn-dark {
+            margin-right: 10px;
+        }
+
+        .btn-primary {
+            margin-left: 10px;
+        }
+    </style>
+}
+
+
+<div class="content">
+    <h1>Responder E-mail</h1>
+    <form asp-action="Edit">
+        <div class="row">
+            <div class="col-md-6 col-12">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" asp-for="DataContato" />
+                <input type="hidden" asp-for="DataRetorno" />
+
+                <div class="form-group">
+                    <label asp-for="Nome" class="control-label"></label>
+                    <input asp-for="Nome" class="form-control" readonly />
+                </div>
+            </div>
+            <div class="col-md-6 col-12">
+                <div class="form-group">
+                    <label asp-for="Assunto" class="control-label"></label>
+                    <input asp-for="Assunto" class="form-control" readonly />
+                </div>
+            </div>
+            <div class="col-md-12 col-12">
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="form-control" readonly />
+                </div>
+            </div>
+            <div class="col-md-12 col-12">
+                <div class="form-group">
+                    <label asp-for="Mensagem" class="control-label"></label>
+                    <textarea asp-for="Mensagem" class="form-control" readonly></textarea>
+                </div>
+            </div>
+            <div class="col-md-12 col-12">
+                <div class="form-group">
+                    <label asp-for="Retorno" class="control-label"></label>
+                    <textarea asp-for="Retorno" class="form-control"></textarea>
+                    <span asp-validation-for="Retorno" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-12 col-12">
+                <div class="form-group" style=" display:flex; flex-direction:row;">
+                    <input type="submit" value="Retornar" class="btn btn-dark" /> 
+                    <a asp-action="Index" class="btn btn-primary">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

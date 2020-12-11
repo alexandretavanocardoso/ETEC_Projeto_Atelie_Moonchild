@@ -1,0 +1,282 @@
+﻿<!-- Carregar as listasdo homecontroller.cs-->
+@model AtelieMoonchild.ViewModels.HomeViewModel
+<!-- Ver como adicionar o model contato aqui -->
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{ <!-- Contato -->
+    <link href="~/css/Pages/Contato.css" rel="stylesheet" />
+
+    <style>
+        .swal-text {
+            color: black;
+        }
+
+        .swal-title {
+            color: black;
+        }
+
+        .swal-button {
+            background-color: #00008B;
+        }
+
+            .swal-button:hover:active {
+                background-color: #00008B;
+            }
+
+
+        .swal-icon--success__ring {
+            border: 4px solid green;
+        }
+    </style>
+}
+
+
+<!-- home section start -->
+<section class="home" id="home" style=" background-image: url(../../img/banner/Espaço.jpg);">
+    <div class="max-width">
+        <div class="home-content">
+            <div class="text-2">Somos a <span>Ateliê Moonchild</span></div>
+            <div class="text-3">Fazemos artes em <span class="typing"></span></div>
+            <a href="https://www.instagram.com/ateliemoonchild/" target="_blank"><i class="fa fa-boxes" style="padding:0px 10px;"></i>FAZER MINHA ENCOMENDA</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Area Start -->
+<div class="about-us-area section-padding-80-0 clearfix">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <div class="col-12 col-lg-7">
+                <div class="about-us-content mb-80">
+                    <h3 class="wow fadeInUp" data-wow-delay="100ms" style="color: black; ">Quem Somos</h3>
+                    <p class="wow fadeInUp " data-wow-delay="300ms " style="color: black; font-weight: 500; text-align: justify; margin-top:20px;">
+                        Dedicado especificamente para toda forma de arte, o Ateliê Moonchild, foi criado em 2019, tem como integrantes: Bárbara Menezes, Renata Machado e Geovana Dias, com o objetivo de transcender muita autenticidade de cada uma dessas.
+                        "Tudo é feito com muito cuidado e muita dedicação para todos que confiam no nosso trabalho e que de alguma forma se conectam com a nossa arte, com os nossos traços. Pintamos arte, respiramos arte, somos arte constantemente
+                        e temos o maior prazer de poder transpassar isso para cada uma das pessoas que fecham conosco e também aqueles que admiram todo esse corre e que contribuem de alguma maneira para esse crescimento acontecer. " Agradecemos Terráqueos
+                        👽
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5" data-tilt data-tilt-perspective="800" data-tilt-speed="500" data-tilt-max="25" style="transform-style: preserve-3d">
+                <img class="img-ET" src="~/img/img-alien/ET.jpg" alt="Alienigena" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About Us Area End -->
+<!-- Contador-->
+<div class="contador-artes flex">
+    <div class="row flex">
+        <div class="col-12 col-lg-4 box-contador">
+            <i class="fa fa-palette icon .js-tilt" data-tilt data-tilt-perspective="100" data-tilt-speed="300" data-tilt-max="25" style="transform-style: preserve-3d"></i>
+            <div class="num">
+                700 +
+            </div>
+
+            <p class="texto-contador">Desenhos realizados </p>
+        </div>
+        <div class="col-12 col-lg-4 box-contador">
+            <i class="fa fa-users icon .js-tilt" data-tilt data-tilt-perspective="100" data-tilt-speed="300" data-tilt-max="25" style="transform-style: preserve-3d"></i>
+            <div class="num1">
+                500 +
+            </div>
+            <p class="texto-contador ">Clientes satisfeitos</p>
+        </div>
+        <div class="col-12 col-lg-4 box-contador">
+            <i class="fa fa-paint-brush icon .js-tilt" data-tilt data-tilt-perspective="100" data-tilt-speed="300" data-tilt-max="25" style="transform-style: preserve-3d"></i>
+            <div class="num2">
+                100 +
+            </div>
+            <p class="texto-contador">Pincéis tintados</p>
+        </div>
+    </div>
+</div>
+<!-- Fim Contador-->
+<!-- Gallery Area Start -->
+<div class="alime-portfolio-area section-padding-80 clearfix ">
+    <div class="container">
+        <div class="row ">
+            <div class="col-12 ">
+                <!-- Projects Menu -->
+                <div class="alime-projects-menu ">
+                    <div class="portfolio-menu text-center ">
+                        <button class="btn active " data-filter="* ">Todos</button>
+                        @foreach (var item in Model.Categorias)
+                        {
+                            <button class="btn" data-filter=".@item.Nome.ToLower()">@item.Nome</button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Galeria Aqui -->
+        <div class="row alime-portfolio ">
+
+            @foreach (var cat in Model.Categorias)
+            {
+                @foreach (var pro in cat.Produtos)
+                {
+                    <!-- Single Gallery Item -->
+                    <div class="col-12 col-sm-6 col-lg-3 single_gallery_item @cat.Nome.ToLower() mb-30 wow fadeInUp" data-wow-delay="@string.Concat(pro.Delay, "ms")">
+                        <div class="single-portfolio-content">
+                            <img src="@Url.Content(pro.Image)" alt="Artes">
+                            <div class="hover-content">
+                                <a href="@Url.Content(pro.Image)" class="portfolio-img">+</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+        </div>
+    </div>
+</div>
+<!-- Gallery Area End -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <!-- Instagram-->
+            <h1 class="Atelie-insta">Instagram</h1>
+            <p class="sigam-insta-e-face"> Nos sigam em nosso Instagram <br /> <a class="link-insta" href="https://www.instagram.com/ateliemoonchild/"><span class="span-atelie">ateliemoonchild</span><i style="color: #00008B; font-size:20px; font-weight:bold;" class="fa fa-instagram"></i></a></p>
+
+            <!-- Flickity HTML init -->
+            <div class="carousel"
+                 data-flickity='{"pauseAutoPlayOnHover": false, "autoPlay": 1000, "imagesLoaded": true,"prevNextButtons": false, "lazyLoad": true, "wrapAround": true}'>
+                <img src="~/img/Artes/1.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/13.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/14.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/2.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/21.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/23.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/25.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/27.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/28.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/3.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/30.jpeg" alt="Artes Instagram" />
+                <img src="~/img/Artes/31.jpeg" alt="Artes Instagram" />
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <!-- Facebook-->
+            <h1 class="Atelie-face">Facebook</h1>
+            <p class="sigam-insta-e-face"> Nos sigam em nosso Facebook <br /> <a class="link-face" href="https://www.facebook.com/ateliemoonchild"><span class="span-atelie">ateliemoonchild</span><i style="color: #00008B; font-size:20px; font-weight:bold;" class="fa fa-facebook"></i></a></p>
+
+            <!-- Flickity HTML init -->
+            <div class="carousel"
+                 data-flickity='{"pauseAutoPlayOnHover": false, "autoPlay": 1000, "imagesLoaded": true,"prevNextButtons": false, "lazyLoad": true, "wrapAround": true}'>
+                <img src="~/img/Artes/32.jpeg" alt="Artes Facebook" />
+                <img src="~/img/Artes/33.jpeg" alt="Artes Facebook" />
+                <img src="~/img/Artes/34.jpeg" alt="Artes Facebook" />
+                <img src="~/img/Artes/35.jpeg" alt="Artes Facebook" />
+                <img src="~/img/Artes/37.jpeg" alt="Artes Facebook" />
+                <img src="~/img/Artes/40.jpeg" alt="Artes Facebook" />
+                <img src="~/img/Artes/41.jpg" alt="Artes Facebook" />
+                <img src="~/img/Artes/42.jpg" alt="Artes Facebook" />
+                <img src="~/img/Artes/43.jpg" alt="Artes Facebook" />
+                <img src="~/img/Artes/6.jpeg" alt="Artes Facebook" />
+                <img src="~/img/Artes/7.jpeg" alt="Artes Facebook" />
+                <img src="~/img/Artes/9.jpeg" alt="Artes Facebook" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<form id="formcontato" asp-action="Contatos" method="post" data-ajax="true" data-ajax-method="post" data-ajax-complete="voltou" data-ajax-failure="falhou">
+    <!-- Contato -->
+    <div class="fundo-contact">
+        <div class="container-contact-index">
+            <div class="form-row">
+                <div class="form-group col-md-6 col-12">
+                    <label class="label-contact">Nome</label>
+                    <input class="form-control" asp-for="Contato.Nome">
+                    <span class="text-danger" asp-validation-for="Contato.Nome"></span>
+                </div>
+                <div class="form-group col-md-6 col-12">
+                    <label class="label-contact">Assunto</label>
+                    <input class="form-control" asp-for="Contato.Assunto">
+                    <span class="text-danger" asp-validation-for="Contato.Assunto"></span>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-12 col-12">
+                    <label class="label-contact">E-mail</label>
+                    <input class="form-control" asp-for="Contato.Email">
+                    <span class="text-danger" asp-validation-for="Contato.Email"></span>
+                </div>
+            </div>
+            <div class="form-row col-md-12 col-12">
+                <div class="form-group col-md-12">
+                    <label class="label-contact" for="inputCity">Mensagem</label>
+                    <textarea id="textarea" class="form-control" rows="15" cols="15" asp-for="Contato.Mensagem"></textarea>
+                    <span class="text-danger" asp-validation-for="Contato.Mensagem"></span>
+                </div>
+            </div>
+            <div class="col-md-12 col-12 contact-flex">
+                <button class="btn btn-contact"> Enviar </button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+@section Scripts{
+
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/js/Bibliotecas-novas/tilt.js"></script>
+    @*<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>*@
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+
+        // Voltou
+        voltou = function (xhr) {
+            swal({
+                title: "Obrigado",
+                text: "Agradaçemos seu contato, retornaremos em breve",
+                icon: "success",
+                button: "OK"
+            });
+            document.getElementById('formcontato').reset(); // Limpar Form
+        }
+
+        // falhou
+        falhou = function (xhr) {
+            swal({
+                title: "Problemas ao Enviar",
+                text: "Ocorreu um problema no envio de sua mensagem! Por favor, tente novamente",
+                icon: "warning",
+                button: "OK"
+            });
+        }
+
+        // Paralax
+        $('.js-tilt').tilt({
+            axis: x
+        })
+    </script>
+
+
+
+    <script type="text/javascript">
+        // typing text animation script
+        var typed = new Typed(".typing", {
+            strings: ["Quadros", "Paredes", "Papel", "Roupas", "Madeira", "TUDO !"],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    </script>
+}

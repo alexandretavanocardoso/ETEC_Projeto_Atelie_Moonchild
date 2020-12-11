@@ -1,0 +1,81 @@
+﻿@model AtelieMoonchild.ViewModels.CategoriaViewModel
+
+
+@{
+    ViewData["Title"] = "Nossas-Artes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <style>
+        /* Icon */
+        .fa-ban {
+            font-size: 200px;
+            color: rgba(0,0,0,0.5);
+        }
+
+        .camera {
+            font-size: 200px;
+            color: rgba(0,0,0,0.5);
+        }
+    </style>
+
+}
+
+<!-- Final Indicador fim pagina-->
+<!-- Breadcrumb Area Start -->
+<section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(../../img/banner/galeria.jpg);">
+</section>
+<!-- Breadcrumb Area End -->
+<!-- Gallery Area Start -->
+<div class="alime-portfolio-area section-padding-80 clearfix">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- Projects Menu -->
+                <div class="alime-projects-menu wow fadeInUp" data-wow-delay="100ms">
+                    <div class="portfolio-menu text-center">
+                        <h1 class="btn active" data-filter="*">@Model.Nome</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row alime-portfolio">
+
+            @if (Model.Produtos.Count() == 0)
+            {
+
+                <div class="col-12 col-sm-6 col-lg-3 single_gallery_item mb-30 wow fadeInUp" data-wow-delay="100ms">
+                    <div class="single-portfolio-content">
+                        <img src="~/img/sem_foto.png" alt="Artes"/>
+                        <div class="hover-content">
+                            <a href="~/img/sem_foto.png" class="portfolio-img">+</a>
+                        </div>
+                    </div>
+                </div>
+
+               
+
+            }
+            else
+            {
+                foreach (var item in Model.Produtos)
+                {
+                    <!-- Single Gallery Item -->
+                    <div class="col-12 col-sm-6 col-lg-3 single_gallery_item mb-30 wow fadeInUp" data-wow-delay="@string.Concat(item.Delay, "ms")">
+                        <div class="single-portfolio-content">
+                            <img src="@Url.Content(item.Image)" alt="Artes">
+                            <div class="hover-content">
+                                <a href="@Url.Content(item.Image)" class="portfolio-img">+</a>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            }
+
+        </div>
+    </div>
+</div>
+

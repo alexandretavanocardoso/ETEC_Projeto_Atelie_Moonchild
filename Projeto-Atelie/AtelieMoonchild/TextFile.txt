@@ -1,0 +1,9 @@
+﻿ <button class="btn active " data-filter="* ">Todos</button>
+                        <button class="btn " data-filter=".human ">Quadros</button>
+                        <button class="btn " data-filter=".nature ">Paredes</button>
+                        <button class="btn " data-filter=".country ">Madeira</button>
+                        <button class="btn " data-filter=".video ">Papel</button>
+
+Cor = #00008B
+
+

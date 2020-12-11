@@ -1,0 +1,156 @@
+﻿@inject AtelieMoonchild.Data.AtelieMoonchildContext con
+@using AtelieMoonchild.Data
+@{
+    var categoria = con.Categorias.ToList();
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Ateliê Moonchild - @ViewData["Title"]</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="~/img/Admin/logoatelie.jpg">
+
+    <!-- Flickty - carousel-->
+    <link href="~/js/Bibliotecas-novas/flickity/flickity.css" rel="stylesheet" />
+    <!-- Insta -->
+    <link href="~/js/Bibliotecas-novas/filtro-Insta/instagram.css" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link href="~/style.css" rel="stylesheet" />
+
+    <style>
+        .activeMenu {
+            border-bottom: 3px solid aqua;
+        }
+    </style>
+
+    @RenderSection("Styles", required: false)
+
+</head>
+
+<body>
+
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <!-- Main Header Start -->
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Classy Menu -->
+                    <nav class="classy-navbar justify-content-between" id="alimeNav">
+
+                        <!-- Logo -->
+                        <a class="nav-brand" asp-action="Index" asp-controller="Home">
+                            <div class="left_area">
+                                <h3>Ateliê <span>Moon<i class="fa fa-moon"></i>hild</span></h3>
+                            </div>
+                        </a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler" style="margin:0px 30px 0px 0px; z-index:999999999999999;">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li class="@(ViewData["Title"].ToString() == "Index" ? "activeMenu" : "")"><a asp-action="Index" asp-controller="Home"><i class="fas fa-rocket"></i>Página Inicial</a></li>
+                                    <li class="@(ViewData["Title"].ToString() == "Nossas-Artes" ? "activeMenu" : "")">
+                                        <a href="#"><i class="fas fa-camera"></i>Nossas Artes</a>
+                                        <ul class="dropdown " style=" background-color: #00003a;">
+                                            @foreach (var item in categoria)
+                                            {
+                                                <li><a asp-action="Categoria" asp-controller="Home" asp-route-id="@item.Id" style=" background-color: #00003a; color:white; border-top: 1px solid rgba(255,255,255,0.7)">-- @item.Nome </a></li>
+                                            }
+                                        </ul>
+                                    </li>
+                                    <li class="@(ViewData["Title"].ToString() == "Sobre" ? "activeMenu" : "")"><a asp-action="Sobre" asp-controller="Home"><i class="fas fa-user-astronaut"></i>Quem Somos</a></li>
+                                    <li class="@(ViewData["Title"].ToString() == "Galeria" ? "activeMenu" : "")"><a asp-action="Galeria" asp-controller="Home"><i class="far fa-images"></i>Galeria</a></li>
+                                    <li class="@(ViewData["Title"].ToString() == "Contato" ? "activeMenu" : "")"><a asp-action="Contato" asp-controller="Home"><i class="fas fa-phone-alt"></i>Contato</a></li>
+                                </ul>
+                            </div>
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header Area End -->
+
+    @RenderBody()
+
+    <!-- Footer Area Start -->
+    <footer class="footer-area" @*style="position: relative; bottom:0; width:100%; z-index:999999999999999999999;"*@>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-12 ">
+                    <div class="footer-content d-flex align-items-center justify-content-between ">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo ">
+                            <a asp-controller="Home" asp-action="Index">
+                                <div class="footer_area">
+                                    <h3>Ateliê <span>Moon<i class="fa fa-moon"></i>hild</span></h3>
+                                </div>
+                            </a>
+                        </div>
+                        <!-- Social Info -->
+                        <div class="social-info ">
+                            <a href="https://www.facebook.com/ateliemoonchild "><i class="ti-facebook " aria-hidden="true "></i></a>
+                            <a href="https://www.instagram.com/ateliemoonchild/ "><i class="ti-instagram " aria-hidden="true "></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Area End -->
+    <!-- **** All JS Files ***** -->
+    <!-- jQuery 2.2.4 -->
+    <script src="~/js/jquery.min.js "></script>
+    <!-- Scrolline -->
+    <script type="text/javascript">
+
+        $(function () {
+            $.scrolline({
+                frontColor: '#19B3D3',
+                backColor: 'black',
+                position: 'top',
+                weight: '10',
+                zindex: '9999999999999999999999999999999999999999999999',
+                weight: 7
+            });
+        });
+    </script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/1d0fc5b865.js " crossorigin="anonymous "></script>
+    <!-- Popper -->
+    <script src="~/js/popper.min.js "></script>
+    <!-- Bootstrap -->
+    <script src="~/js/bootstrap.min.js "></script>
+    <!-- All Plugins -->
+    <script src="~/js/alime.bundle.js "></script>
+    <!-- Active -->
+    <script src="~/js/default-assets/active.js "></script>
+    <!--Scrolline-->
+    <script src="~/js/Bibliotecas-novas/Scrolline/jquery.scrolline.js"></script>
+    <!--Flickty-->
+    <script src="~/js/Bibliotecas-novas/flickity/flickity.pkgd.min.js"></script>
+
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>

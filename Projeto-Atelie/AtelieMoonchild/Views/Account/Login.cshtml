@@ -1,0 +1,64 @@
+﻿@model AtelieMoonchild.ViewModels.LoginViewModel
+
+@{ ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml"; }
+
+<div class="login-box">
+
+    <form asp-action="Login" method="post">
+        <div asp-validation-summary="ModelOnly" class="text-danger" hidden></div>
+        <h2 class="titulo">Login</h2>
+
+        <div class="user-box">
+            <!-- Email de acesso -->
+            <input asp-for=" Email" class="input">
+            <span asp-validation-for="Email" class="text-danger"></span>
+            <label>Usuário</label>
+
+        </div>
+        <div class="user-box">
+            <!-- Senha de acesso -->
+            <input asp-for="Senha">
+            <span asp-validation-for="Senha" class="text-danger"></span>
+            <label>Senha</label>
+
+        </div>
+        <div class="control-group">
+            <label class="control control-checkbox">
+                <!-- Manter Conectado-->
+                <input type="checkbox" asp-for="Manter" />
+                <label asp-for="Manter" style="color:white; font-size:16px; letter-spacing:1px;"></label>
+                <div class="control_indicator"></div>
+            </label>
+        </div>
+        <div style=" display: flex; align-items: center; justify-content: center;">
+            <button type="submit" value="submit" id="" class="btn btn-outline-info btn-entrar"> Entrar </button>
+
+        </div>
+        <!--<div class="flex-centro">-->
+            <!-- Esqueci senha-->
+            <!--<a asp-action="ForgotPassword" class="link-senha">Esqueceu sua senha?</a>
+        </div>-->
+    </form>
+</div>
+
+@section Scripts{
+
+    @* Obrigatorio para estourar o erro *@
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+    <script type="text/javascript">
+        var elemento = $(".validation-summary-errors");
+        if (elemento.length != 0) {
+            swal({
+                title: "Acesso Negado",
+                text: elemento[0].childNodes[0].childNodes[0].innerHTML,
+                icon: "error",
+                button: "OK"
+            });
+        }
+    </script>
+}
+

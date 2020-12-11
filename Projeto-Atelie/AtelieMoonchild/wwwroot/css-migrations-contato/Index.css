@@ -1,0 +1,180 @@
+﻿
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    font-size: 20px;
+}
+
+.btn-outline-primary {
+    border: 1px solid #00008B;
+    background: transparent;
+    color: black;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #00008B;
+        border: 1px solid #00008B;
+        color: white;
+    }
+
+.table {
+    margin-bottom: 50px;
+    color: white;
+    width: 1120px;
+}
+
+thead {
+    background-color: #000000;
+}
+
+.bg {
+    background-color: #B0C4DE;
+}
+
+h2 {
+    text-align: center;
+    color: #00008B;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+td {
+    padding: 5px 2px 5px 0;
+    color: black;
+    
+}
+
+.wrap {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100px;
+    max-width:100px;
+}
+
+.wrap2 {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100px;
+    max-width: 100px;
+}
+
+.wrap3 {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100px;
+    max-width: 100px;
+}
+
+@media (max-width: 1300px) {
+    .table {
+        margin-bottom: 50px;
+        color: white;
+        width: 850px;
+    }
+}
+
+@media (max-width: 1135px) {
+    .table {
+        margin-bottom: 50px;
+        color: white;
+        width: 700px;
+    }
+}
+
+@media (max-width: 980px) {
+    .table {
+        margin-bottom: 50px;
+        color: white;
+        width: 500px;
+    }
+}
+
+@media (max-width: 559px) {
+
+    .table {
+        margin-bottom: 50px;
+        color: white;
+        width: 330px;
+    }
+}
+
+@media (max-width: 387px) {
+
+
+    .table {
+        margin-bottom: 50px;
+        color: white;
+        width: 300px;
+    }
+}
+
+
+.btn-outline-primary {
+    border: 1px solid #00008B;
+    background: transparent;
+    color: black;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #00008B;
+        border: 1px solid #00008B;
+        color: white;
+    }
+
+
+.wrap {
+    text-overflow: ellipsis;
+    /* Required for text-overflow to do anything */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 350px;
+}
+
+.td-icones {
+    padding: 10px 10px 10px 10px;
+}
+
+
+/* Pagination */
+
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.page-item {
+    margin: 0px 1px 0px 1px;
+}
+
+.page-link {
+    color: white;
+    background: #00008B;
+    font-size: 18px;
+}
+
+    .page-link:hover {
+        color: white;
+        background: black;
+    }
+
+    .page-link:active {
+        color: white;
+        background: black;
+    }
+
+

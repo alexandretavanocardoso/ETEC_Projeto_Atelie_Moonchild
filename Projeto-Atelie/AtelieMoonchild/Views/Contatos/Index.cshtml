@@ -1,0 +1,103 @@
+﻿@model X.PagedList.IPagedList<AtelieMoonchild.Models.Contato>
+@using X.PagedList.Mvc.Core;
+
+@{
+    ViewData["Title"] = "E-mail";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section Styles {
+
+    <link href="~/css-migrations-contato/Index.css" rel="stylesheet" />
+
+}
+
+
+<div class="content">
+
+    <h2> Listagem de E-mails </h2>
+
+    <form class="form" asp-controller="Contatos" asp-action="Index" method="get">
+        <div class="input-group mb-3">
+            <input style=" border: 1px solid #00008B;" type="text" class="form-control" value="@ViewData["Filtro"]"
+                   placeholder="E-mail a Pesquisar" name="pesquisa" aria-label="" aria-describedby="basic-addon1" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-responsive-md">
+        <thead>
+            <tr>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    E-mail
+                </th>
+                <th>
+                    Mensagem
+                </th>
+                <th>
+                    Assunto
+                </th>
+                <th>
+                    Retorno
+                </th>
+                <th>
+                    Operações
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+
+                    </td>
+                    <td>
+                        <div class="wrap2">
+                            @Html.DisplayFor(modelItem => item.Mensagem)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="wrap3">
+                            @Html.DisplayFor(modelItem => item.Assunto)
+                        </div>
+                    </td>
+                    <td>
+                        <div class="wrap">
+                            @Html.DisplayFor(modelItem => item.Retorno)
+                        </div>
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id"><i class="fas fa-reply-all td-icones" style="color:black;" data-toggle="tooltip" data-placement="right" title="Retornar"></i></a>
+                        <a asp-action="Details" asp-route-id="@item.Id"><i class="fa fa-info td-icones" style="color:#FFD700;" data-toggle="tooltip" data-placement="bottom" title="Detalhes"></i></a>
+                        <a asp-action="Delete" asp-route-id="@item.Id"><i class="fa fa-trash-alt td-icones" style="color:#B22222;" data-toggle="tooltip" data-placement="left" title="Deletar"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+    @Html.PagedListPager(Model, pagina => Url.Action("Index", new { filtro = ViewData["Filtro"], pagina }),
+            new X.PagedList.Web.Common.PagedListRenderOptionsBase
+            {
+                DisplayLinkToFirstPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+                DisplayLinkToLastPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+                DisplayLinkToNextPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+                DisplayLinkToPreviousPage = X.PagedList.Web.Common.PagedListDisplayMode.Always,
+                ContainerDivClasses = new[] { "pagination-container" },
+                UlElementClasses = new string[] { "pagination justify-content-center" },
+                LiElementClasses = new string[] { "page-item" },
+                PageClasses = new string[] { "page-link" }
+            })
+</div>
