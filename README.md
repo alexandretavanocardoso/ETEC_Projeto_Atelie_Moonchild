@@ -4,7 +4,7 @@
   <img width="1200" height="350" src="https://image.freepik.com/vetores-gratis/ilustracao-dos-desenhos-animados-do-espaco-com-diferentes-planetas-galaxia-cosmos-elemento-do-universo-para-jogos-de-computador-livro-para-criancas_104571-83.jpg">
 </p>
 
-## Projeto TCC - ATELIÊ MOONCHILD 👽
+## Projeto TCC - ATELIÊ MOONCHILD 👽 :relaxed:
 
 ---
 
