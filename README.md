@@ -4,15 +4,15 @@
   <img width="1200" height="350" src="https://image.freepik.com/vetores-gratis/ilustracao-dos-desenhos-animados-do-espaco-com-diferentes-planetas-galaxia-cosmos-elemento-do-universo-para-jogos-de-computador-livro-para-criancas_104571-83.jpg">
 </p>
 
-## Projeto TCC - ATELIÊ MOONCHILD 👽 :relaxed:
+## Projeto TCC - ATELIÊ MOONCHILD :rocket: :alien:
 
 ---
 
-Foi um website direcionado para um cliente real, porém pode ser que nao seja hospedado 🖥️
+Foi um website direcionado para um cliente real, porém pode ser que nao seja hospedado :dollar:
 
-O layout foi desenvolvido pelo **Visual Studio Code**, usando **HTML**, **CSS**, **JS**, **jQuery** e **Bootstrap** 🖥️
+O layout foi desenvolvido pelo **Visual Studio Code**, usando **HTML**, **CSS**, **JS**, **jQuery** e **Bootstrap** :computer:
 
-Para fazer a parte dinâmica do site, onde o administrador consegue interagir com o site, foi usado o **Visual Studio 2019** com o **ASPNET Core MVC** 🖥️
+Para fazer a parte dinâmica do site, onde o administrador consegue interagir com o site, foi usado o **Visual Studio 2019** com o **ASPNET Core MVC** :computer:
 
 O banco de dados escolhido foi o **Mysql** com o **XAMPP** 🖥️
 
