@@ -1,6 +1,6 @@
 
 
-![Atelie](https://image.freepik.com/vetores-gratis/ilustracao-dos-desenhos-animados-do-espaco-com-diferentes-planetas-galaxia-cosmos-elemento-do-universo-para-jogos-de-computador-livro-para-criancas_104571-83.jpg "TCC")
+![Atelie](https://image.freepik.com/vetores-gratis/ilustracao-dos-desenhos-animados-do-espaco-com-diferentes-planetas-galaxia-cosmos-elemento-do-universo-para-jogos-de-computador-livro-para-criancas_104571-83.jpg  | width=50)
 
 ## Projeto TCC - ATELIÊ MOONCHILD 👽
 
