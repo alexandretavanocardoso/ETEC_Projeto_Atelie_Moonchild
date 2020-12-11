@@ -4,7 +4,7 @@
   <img width="1200" height="350" src="https://image.freepik.com/vetores-gratis/ilustracao-dos-desenhos-animados-do-espaco-com-diferentes-planetas-galaxia-cosmos-elemento-do-universo-para-jogos-de-computador-livro-para-criancas_104571-83.jpg">
 </p>
 
-## Projeto TCC - ATELIÊ MOONCHILD :rocket: :alien:
+> ## Projeto TCC - ATELIÊ MOONCHILD :rocket: :alien:
 
 ---
 
@@ -18,14 +18,14 @@ O banco de dados escolhido foi o **Mysql** com o **XAMPP** 🖥️
 
 ---
 
-### OBJETIVO 
+> ### OBJETIVO 
 
 O objetivo deste projeto é desenvolver uma plataforma que leve em consideração
 expandir suas artes e vender seus trabalhos online, proporcionando assim aumentar a visibilidade e alcance da empresa, atraindo novos clientes.
 
 ---
 
-### JUSTIFICATIVA
+> ### JUSTIFICATIVA
 
 Dentre todos os mercados de trabalho de artes, poucas lojas digitais são de artes a maioria é vendida em lojas, galerias entre outros, com a conclusão do site, 
 temos o intuito de ter uma visibilidade maior no comércio eletrônico, trazendo mais compreensibilidade aos consumidores e desfrutando o lazer em sua casa, 
@@ -33,7 +33,7 @@ edindo um orçamento e adquirindo um produto de seu gosto.
 
 ---
 
-### METODOLOGIA
+> ### METODOLOGIA
 
 #### Front-end
 1. **Ferramenta**
@@ -70,28 +70,28 @@ edindo um orçamento e adquirindo um produto de seu gosto.
 
 ---
 
-### PRINCIPAIS DIFICULDADES
+> ### PRINCIPAIS DIFICULDADES
 
 A principal dificuldade no desenvolvimento do website Moonchild foi a parte dinâmica do site, pois obtivemos dificuldade na 
 programação C# ASPNET MVC5 por falta de conhecimento e experiencia.
 
 ---
 
-### RESULTADOS OBTIDOS
+> ### RESULTADOS OBTIDOS
 
 Obtemos os resultados esperado, onde o cliente conheçe os trabalhos realizados pelo ateliê e também podem realizar pedidos via Instagram ou enviar por e-mail. 
 Já na parte do administrador ele consegue interagir com o site, adicionando novas artes e novas categorias.
 
 ---
 
-### CONCLUSÃO
+> ### CONCLUSÃO
 
 No planejamento deste projeto definimos que o website seria para vendas de cursos, porém, ao decorrer do desenvolvimento do trabalho encontramos dificuldades, logo trocamos. 
 Seria um site para uma loja de vidraçaria, porém o site precisaria estar pronto antes do previsto para as apresentações, tendo que mudar. Por fim, achamos um projeto bom para trabalharmos e que seria uma loja online de vendas de produtos artísticos. Trabalhamos com muita persistência e enorme interesse na criação de um website dinâmico, limpo e simples, sempre com a preocupação de aumentar a eficiência e visibilidade do Ateliê. Planejamos no futuro também inserir a possibilidade de os clientes fazerem os pedidos no próprio website, onde o cliente poderá efetuar o pagamento.
 
 ---
 
-### REFERÊNCIAS
+> ### REFERÊNCIAS
 
 **Flickty** – Disponível em: <https://flickity.metafizzy.co/>Acesso em 20 de Setembro de 2020.
 
