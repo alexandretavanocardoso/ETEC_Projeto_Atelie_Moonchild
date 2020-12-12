@@ -55,20 +55,26 @@ edindo um orçamento e adquirindo um produto de seu gosto.
 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 #### Design
-1. **Protótipo**
-    1.1 ![image](https://img.shields.io/badge/Adobe_XD-FF26BE?style=for-the-badge&logo=adobe-xd&logoColor=white)
-2. **Design**
-    2.1 ![image](https://img.shields.io/badge/Adobe_Photoshop-FF26BE?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
-3. **Power Point**
-    3.1 ![image](https://img.shields.io/badge/Canva-31A8FF?style=for-the-badge&logo=canva&logoColor=white)
+**Protótipo**
+
+![image](https://img.shields.io/badge/Adobe_XD-FF26BE?style=for-the-badge&logo=adobe-xd&logoColor=white)
+
+**Design**
+
+![image](https://img.shields.io/badge/Adobe_Photoshop-FF26BE?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
+
+**Power Point**
+
+![image](https://img.shields.io/badge/Canva-31A8FF?style=for-the-badge&logo=canva&logoColor=white)
 
 #### Back-end
 **Banco de Dados**
+
 ![image](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
 
 **Ferramenta**
 
-    2.1 ![image](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)
+![image](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)
     
 **Framework**
 
