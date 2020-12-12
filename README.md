@@ -37,7 +37,7 @@ edindo um orçamento e adquirindo um produto de seu gosto.
 
 #### Front-end
 1. **Ferramenta**
-    1.1 Visual Studio Code
+    1.1 ![image](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 2. **Framework**
     2.1 Bootstrap
 3. **Bibliotecas**
