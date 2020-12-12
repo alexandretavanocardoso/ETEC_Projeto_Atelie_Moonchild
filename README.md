@@ -63,7 +63,7 @@ edindo um orçamento e adquirindo um produto de seu gosto.
 
 ##### Design
 
-![image](https://img.shields.io/badge/Adobe_Photoshop-FF26BE?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
+![image](https://img.shields.io/badge/Adobe_Photoshop-31A8FE?style=for-the-badge&logo=adobe-photoshop&logoColor=white)
 
 ##### Power Point
 
