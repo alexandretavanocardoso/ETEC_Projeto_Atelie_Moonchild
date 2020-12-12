@@ -45,7 +45,7 @@ edindo um orçamento e adquirindo um produto de seu gosto.
 
 ![image](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-#####Biblioteca
+##### Biblioteca
 
 ![image](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
     
@@ -85,7 +85,7 @@ edindo um orçamento e adquirindo um produto de seu gosto.
 
 #### Controle de Versões
 
-#####Arquivos
+##### Arquivos
 
 ![image](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)
 
