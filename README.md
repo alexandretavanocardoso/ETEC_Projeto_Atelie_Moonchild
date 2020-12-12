@@ -36,16 +36,23 @@ edindo um orçamento e adquirindo um produto de seu gosto.
 > ### METODOLOGIA
 
 #### Front-end
-1. **Ferramenta**
-    1.1 ![image](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-2. **Framework**
-    2.1 ![image](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-3. **Biblioteca**
-    3.1 [image](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
-4. **Linguagens**
-    4.1 ![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-    4.2 ![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-    4.3 ![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+**Ferramenta**
+
+![image](https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+**Framework**
+
+![image](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+**Biblioteca**
+
+![image](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+    
+**Linguagens**
+
+![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![image](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![image](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 
 #### Design
 1. **Protótipo**
@@ -56,16 +63,21 @@ edindo um orçamento e adquirindo um produto de seu gosto.
     3.1 ![image](https://img.shields.io/badge/Canva-31A8FF?style=for-the-badge&logo=canva&logoColor=white)
 
 #### Back-end
-1. **Banco de Dados**
-    1.1 ![image](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
-2. **Ferramenta**
+**Banco de Dados**
+![image](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+
+**Ferramenta**
+
     2.1 ![image](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)
-3. **Framework**
-    3.1 ASPNET Core MVC
+    
+**Framework**
+
+ ASPNET Core MVC
 
 #### Controle de Versões
-1. **Arquivos**
-    1.1 ![image](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)
+**Arquivos**
+
+![image](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white)
 
 ---
 
