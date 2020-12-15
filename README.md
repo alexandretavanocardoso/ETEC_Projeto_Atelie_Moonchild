@@ -114,19 +114,19 @@ Seria um site para uma loja de vidraçaria, porém o site precisaria estar pront
 
 > ### REFERÊNCIAS
 
-**Flickty** – Disponível em: <https://flickity.metafizzy.co/>Acesso em 20 de Setembro de 2020.
+**Flickty** – Disponível em: <https://flickity.metafizzy.com/ >Acesso em 20 de Setembro de 2020.
 
-**Bootstrap** – Disponível em: < https://getbootstrap.com> Acesso em 1 de Março de 2020.
+**Bootstrap** – Disponível em: < https://getbootstrap.com/ > Acesso em 1 de Março de 2020.
 
 **Font awesome** – Disponível em: <https://fontawesome.com/ > Acesso em 18 de Agosto de 2020.
 
-**Codingsnow** – Disponível em: <https://nightfuryalfa.com/pages/codingsnow/codingsnow.php>Acesso em 20 de Setembro de 2020.
+**Codingsnow** – Disponível em: < https://nightfuryalfa.com/pages/codingsnow/codingsnow.php/ > Acesso em 20 de Setembro de 2020.
 
-**Freepik** –Disponível em: <https://br.freepik.com/> Acesso em 10 de Março de 2020.
+**Freepik** –Disponível em: < https://br.freepik.com/ > Acesso em 10 de Março de 2020.
 
-**jQuery** –Disponível em: <https://jquery.com/> Acesso em 20 de Setembro de 2020.
+**jQuery** –Disponível em: < https://jquery.com/ > Acesso em 20 de Setembro de 2020.
 
-**W3schools** – Disponível em: <https://www.w3schools.com/> Acesso em 20 de Setembro de 2020.
+**W3schools** – Disponível em: < https://www.w3schools.com/ > Acesso em 20 de Setembro de 2020.
 
 
 
